@@ -1,15 +1,12 @@
 #include "create_tags4_without_guesser.h"
-#include "uniq.cpp"
-#include "flatten.cpp"
-#include <iostream>
 
 std::vector<std::string> create_tag4(std::string &tag){
 	if(tag.empty())return std::vector<std::string>(1, ""); // TODO: base case?
 
 	//cas = ['nom', 'gen', 'dat', 'acc', 'inst', 'loc', 'voc']
-        static std::unordered_set<std::string> cas({"nom", "gen", "dat", "acc", "inst", "loc", "voc"});
-        //per = ['pri', 'sec', 'ter']
-        static std::unordered_set<std::string> per({"pri", "sec", "ter"});
+    static std::unordered_set<std::string> cas({"nom", "gen", "dat", "acc", "inst", "loc", "voc"});
+    //per = ['pri', 'sec', 'ter']
+    static std::unordered_set<std::string> per({"pri", "sec", "ter"});
 
 	std::vector<std::string> tags;
 	int last_dot_pos=-1;
@@ -31,7 +28,16 @@ std::vector<std::string> create_tag4(std::string &tag){
 	}
 
 	if(last_colon_pos != tag.length()){
-		tags.push_back(tag.substr(last_colon_pos+1, tag.length()-last_colon_pos-1));
+		last_dot_pos = -1;
+		part = tag.substr(last_colon_pos+1, tag.length() - last_colon_pos - 1);
+
+		while( (current_dot_pos = part.find(".", last_dot_pos+1)) != std::string::npos ){
+			tags.push_back(part.substr(last_dot_pos+1, current_dot_pos - last_dot_pos - 1));
+			last_dot_pos = current_dot_pos;
+		}
+		if(last_dot_pos != part.length() - 1)
+			tags.push_back(part.substr(last_dot_pos+1, part.length()-last_dot_pos-1));
+		last_colon_pos = current_colon_pos;
 	}
 	//std::string pos = tags[0];
 

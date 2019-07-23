@@ -1,5 +1,6 @@
-#include <unordered_set>
-#include <vector>
-#include <string>
+
+%{
+        #include "uniq.h"
+%}
 
 std::vector< std::string > uniq(std::vector< std::string > inp);

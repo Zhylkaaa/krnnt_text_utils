@@ -9,12 +9,12 @@ if _swig_python_version_info >= (2, 7, 0):
     def swig_import_helper():
         import importlib
         pkg = __name__.rpartition('.')[0]
-        mname = '.'.join((pkg, '_flatten_test')).lstrip('.')
+        mname = '.'.join((pkg, '_krnnt_utils')).lstrip('.')
         try:
             return importlib.import_module(mname)
         except ImportError:
-            return importlib.import_module('_flatten_test')
-    _flatten_test = swig_import_helper()
+            return importlib.import_module('_krnnt_utils')
+    _krnnt_utils = swig_import_helper()
     del swig_import_helper
 elif _swig_python_version_info >= (2, 6, 0):
     def swig_import_helper():
@@ -22,20 +22,20 @@ elif _swig_python_version_info >= (2, 6, 0):
         import imp
         fp = None
         try:
-            fp, pathname, description = imp.find_module('_flatten_test', [dirname(__file__)])
+            fp, pathname, description = imp.find_module('_krnnt_utils', [dirname(__file__)])
         except ImportError:
-            import _flatten_test
-            return _flatten_test
+            import _krnnt_utils
+            return _krnnt_utils
         try:
-            _mod = imp.load_module('_flatten_test', fp, pathname, description)
+            _mod = imp.load_module('_krnnt_utils', fp, pathname, description)
         finally:
             if fp is not None:
                 fp.close()
         return _mod
-    _flatten_test = swig_import_helper()
+    _krnnt_utils = swig_import_helper()
     del swig_import_helper
 else:
-    import _flatten_test
+    import _krnnt_utils
 del _swig_python_version_info
 
 try:
@@ -104,59 +104,59 @@ class SwigPyIterator(_object):
     def __init__(self, *args, **kwargs):
         raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
-    __swig_destroy__ = _flatten_test.delete_SwigPyIterator
+    __swig_destroy__ = _krnnt_utils.delete_SwigPyIterator
     __del__ = lambda self: None
 
     def value(self):
-        return _flatten_test.SwigPyIterator_value(self)
+        return _krnnt_utils.SwigPyIterator_value(self)
 
     def incr(self, n=1):
-        return _flatten_test.SwigPyIterator_incr(self, n)
+        return _krnnt_utils.SwigPyIterator_incr(self, n)
 
     def decr(self, n=1):
-        return _flatten_test.SwigPyIterator_decr(self, n)
+        return _krnnt_utils.SwigPyIterator_decr(self, n)
 
     def distance(self, x):
-        return _flatten_test.SwigPyIterator_distance(self, x)
+        return _krnnt_utils.SwigPyIterator_distance(self, x)
 
     def equal(self, x):
-        return _flatten_test.SwigPyIterator_equal(self, x)
+        return _krnnt_utils.SwigPyIterator_equal(self, x)
 
     def copy(self):
-        return _flatten_test.SwigPyIterator_copy(self)
+        return _krnnt_utils.SwigPyIterator_copy(self)
 
     def next(self):
-        return _flatten_test.SwigPyIterator_next(self)
+        return _krnnt_utils.SwigPyIterator_next(self)
 
     def __next__(self):
-        return _flatten_test.SwigPyIterator___next__(self)
+        return _krnnt_utils.SwigPyIterator___next__(self)
 
     def previous(self):
-        return _flatten_test.SwigPyIterator_previous(self)
+        return _krnnt_utils.SwigPyIterator_previous(self)
 
     def advance(self, n):
-        return _flatten_test.SwigPyIterator_advance(self, n)
+        return _krnnt_utils.SwigPyIterator_advance(self, n)
 
     def __eq__(self, x):
-        return _flatten_test.SwigPyIterator___eq__(self, x)
+        return _krnnt_utils.SwigPyIterator___eq__(self, x)
 
     def __ne__(self, x):
-        return _flatten_test.SwigPyIterator___ne__(self, x)
+        return _krnnt_utils.SwigPyIterator___ne__(self, x)
 
     def __iadd__(self, n):
-        return _flatten_test.SwigPyIterator___iadd__(self, n)
+        return _krnnt_utils.SwigPyIterator___iadd__(self, n)
 
     def __isub__(self, n):
-        return _flatten_test.SwigPyIterator___isub__(self, n)
+        return _krnnt_utils.SwigPyIterator___isub__(self, n)
 
     def __add__(self, n):
-        return _flatten_test.SwigPyIterator___add__(self, n)
+        return _krnnt_utils.SwigPyIterator___add__(self, n)
 
     def __sub__(self, *args):
-        return _flatten_test.SwigPyIterator___sub__(self, *args)
+        return _krnnt_utils.SwigPyIterator___sub__(self, *args)
     def __iter__(self):
         return self
-SwigPyIterator_swigregister = _flatten_test.SwigPyIterator_swigregister
+SwigPyIterator_swigregister = _krnnt_utils.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
 class StringVector(_object):
@@ -167,109 +167,109 @@ class StringVector(_object):
     __repr__ = _swig_repr
 
     def iterator(self):
-        return _flatten_test.StringVector_iterator(self)
+        return _krnnt_utils.StringVector_iterator(self)
     def __iter__(self):
         return self.iterator()
 
     def __nonzero__(self):
-        return _flatten_test.StringVector___nonzero__(self)
+        return _krnnt_utils.StringVector___nonzero__(self)
 
     def __bool__(self):
-        return _flatten_test.StringVector___bool__(self)
+        return _krnnt_utils.StringVector___bool__(self)
 
     def __len__(self):
-        return _flatten_test.StringVector___len__(self)
+        return _krnnt_utils.StringVector___len__(self)
 
     def __getslice__(self, i, j):
-        return _flatten_test.StringVector___getslice__(self, i, j)
+        return _krnnt_utils.StringVector___getslice__(self, i, j)
 
     def __setslice__(self, *args):
-        return _flatten_test.StringVector___setslice__(self, *args)
+        return _krnnt_utils.StringVector___setslice__(self, *args)
 
     def __delslice__(self, i, j):
-        return _flatten_test.StringVector___delslice__(self, i, j)
+        return _krnnt_utils.StringVector___delslice__(self, i, j)
 
     def __delitem__(self, *args):
-        return _flatten_test.StringVector___delitem__(self, *args)
+        return _krnnt_utils.StringVector___delitem__(self, *args)
 
     def __getitem__(self, *args):
-        return _flatten_test.StringVector___getitem__(self, *args)
+        return _krnnt_utils.StringVector___getitem__(self, *args)
 
     def __setitem__(self, *args):
-        return _flatten_test.StringVector___setitem__(self, *args)
+        return _krnnt_utils.StringVector___setitem__(self, *args)
 
     def pop(self):
-        return _flatten_test.StringVector_pop(self)
+        return _krnnt_utils.StringVector_pop(self)
 
     def append(self, x):
-        return _flatten_test.StringVector_append(self, x)
+        return _krnnt_utils.StringVector_append(self, x)
 
     def empty(self):
-        return _flatten_test.StringVector_empty(self)
+        return _krnnt_utils.StringVector_empty(self)
 
     def size(self):
-        return _flatten_test.StringVector_size(self)
+        return _krnnt_utils.StringVector_size(self)
 
     def swap(self, v):
-        return _flatten_test.StringVector_swap(self, v)
+        return _krnnt_utils.StringVector_swap(self, v)
 
     def begin(self):
-        return _flatten_test.StringVector_begin(self)
+        return _krnnt_utils.StringVector_begin(self)
 
     def end(self):
-        return _flatten_test.StringVector_end(self)
+        return _krnnt_utils.StringVector_end(self)
 
     def rbegin(self):
-        return _flatten_test.StringVector_rbegin(self)
+        return _krnnt_utils.StringVector_rbegin(self)
 
     def rend(self):
-        return _flatten_test.StringVector_rend(self)
+        return _krnnt_utils.StringVector_rend(self)
 
     def clear(self):
-        return _flatten_test.StringVector_clear(self)
+        return _krnnt_utils.StringVector_clear(self)
 
     def get_allocator(self):
-        return _flatten_test.StringVector_get_allocator(self)
+        return _krnnt_utils.StringVector_get_allocator(self)
 
     def pop_back(self):
-        return _flatten_test.StringVector_pop_back(self)
+        return _krnnt_utils.StringVector_pop_back(self)
 
     def erase(self, *args):
-        return _flatten_test.StringVector_erase(self, *args)
+        return _krnnt_utils.StringVector_erase(self, *args)
 
     def __init__(self, *args):
-        this = _flatten_test.new_StringVector(*args)
+        this = _krnnt_utils.new_StringVector(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
     def push_back(self, x):
-        return _flatten_test.StringVector_push_back(self, x)
+        return _krnnt_utils.StringVector_push_back(self, x)
 
     def front(self):
-        return _flatten_test.StringVector_front(self)
+        return _krnnt_utils.StringVector_front(self)
 
     def back(self):
-        return _flatten_test.StringVector_back(self)
+        return _krnnt_utils.StringVector_back(self)
 
     def assign(self, n, x):
-        return _flatten_test.StringVector_assign(self, n, x)
+        return _krnnt_utils.StringVector_assign(self, n, x)
 
     def resize(self, *args):
-        return _flatten_test.StringVector_resize(self, *args)
+        return _krnnt_utils.StringVector_resize(self, *args)
 
     def insert(self, *args):
-        return _flatten_test.StringVector_insert(self, *args)
+        return _krnnt_utils.StringVector_insert(self, *args)
 
     def reserve(self, n):
-        return _flatten_test.StringVector_reserve(self, n)
+        return _krnnt_utils.StringVector_reserve(self, n)
 
     def capacity(self):
-        return _flatten_test.StringVector_capacity(self)
-    __swig_destroy__ = _flatten_test.delete_StringVector
+        return _krnnt_utils.StringVector_capacity(self)
+    __swig_destroy__ = _krnnt_utils.delete_StringVector
     __del__ = lambda self: None
-StringVector_swigregister = _flatten_test.StringVector_swigregister
+StringVector_swigregister = _krnnt_utils.StringVector_swigregister
 StringVector_swigregister(StringVector)
 
 class StringVectorVector(_object):
@@ -280,115 +280,131 @@ class StringVectorVector(_object):
     __repr__ = _swig_repr
 
     def iterator(self):
-        return _flatten_test.StringVectorVector_iterator(self)
+        return _krnnt_utils.StringVectorVector_iterator(self)
     def __iter__(self):
         return self.iterator()
 
     def __nonzero__(self):
-        return _flatten_test.StringVectorVector___nonzero__(self)
+        return _krnnt_utils.StringVectorVector___nonzero__(self)
 
     def __bool__(self):
-        return _flatten_test.StringVectorVector___bool__(self)
+        return _krnnt_utils.StringVectorVector___bool__(self)
 
     def __len__(self):
-        return _flatten_test.StringVectorVector___len__(self)
+        return _krnnt_utils.StringVectorVector___len__(self)
 
     def __getslice__(self, i, j):
-        return _flatten_test.StringVectorVector___getslice__(self, i, j)
+        return _krnnt_utils.StringVectorVector___getslice__(self, i, j)
 
     def __setslice__(self, *args):
-        return _flatten_test.StringVectorVector___setslice__(self, *args)
+        return _krnnt_utils.StringVectorVector___setslice__(self, *args)
 
     def __delslice__(self, i, j):
-        return _flatten_test.StringVectorVector___delslice__(self, i, j)
+        return _krnnt_utils.StringVectorVector___delslice__(self, i, j)
 
     def __delitem__(self, *args):
-        return _flatten_test.StringVectorVector___delitem__(self, *args)
+        return _krnnt_utils.StringVectorVector___delitem__(self, *args)
 
     def __getitem__(self, *args):
-        return _flatten_test.StringVectorVector___getitem__(self, *args)
+        return _krnnt_utils.StringVectorVector___getitem__(self, *args)
 
     def __setitem__(self, *args):
-        return _flatten_test.StringVectorVector___setitem__(self, *args)
+        return _krnnt_utils.StringVectorVector___setitem__(self, *args)
 
     def pop(self):
-        return _flatten_test.StringVectorVector_pop(self)
+        return _krnnt_utils.StringVectorVector_pop(self)
 
     def append(self, x):
-        return _flatten_test.StringVectorVector_append(self, x)
+        return _krnnt_utils.StringVectorVector_append(self, x)
 
     def empty(self):
-        return _flatten_test.StringVectorVector_empty(self)
+        return _krnnt_utils.StringVectorVector_empty(self)
 
     def size(self):
-        return _flatten_test.StringVectorVector_size(self)
+        return _krnnt_utils.StringVectorVector_size(self)
 
     def swap(self, v):
-        return _flatten_test.StringVectorVector_swap(self, v)
+        return _krnnt_utils.StringVectorVector_swap(self, v)
 
     def begin(self):
-        return _flatten_test.StringVectorVector_begin(self)
+        return _krnnt_utils.StringVectorVector_begin(self)
 
     def end(self):
-        return _flatten_test.StringVectorVector_end(self)
+        return _krnnt_utils.StringVectorVector_end(self)
 
     def rbegin(self):
-        return _flatten_test.StringVectorVector_rbegin(self)
+        return _krnnt_utils.StringVectorVector_rbegin(self)
 
     def rend(self):
-        return _flatten_test.StringVectorVector_rend(self)
+        return _krnnt_utils.StringVectorVector_rend(self)
 
     def clear(self):
-        return _flatten_test.StringVectorVector_clear(self)
+        return _krnnt_utils.StringVectorVector_clear(self)
 
     def get_allocator(self):
-        return _flatten_test.StringVectorVector_get_allocator(self)
+        return _krnnt_utils.StringVectorVector_get_allocator(self)
 
     def pop_back(self):
-        return _flatten_test.StringVectorVector_pop_back(self)
+        return _krnnt_utils.StringVectorVector_pop_back(self)
 
     def erase(self, *args):
-        return _flatten_test.StringVectorVector_erase(self, *args)
+        return _krnnt_utils.StringVectorVector_erase(self, *args)
 
     def __init__(self, *args):
-        this = _flatten_test.new_StringVectorVector(*args)
+        this = _krnnt_utils.new_StringVectorVector(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
     def push_back(self, x):
-        return _flatten_test.StringVectorVector_push_back(self, x)
+        return _krnnt_utils.StringVectorVector_push_back(self, x)
 
     def front(self):
-        return _flatten_test.StringVectorVector_front(self)
+        return _krnnt_utils.StringVectorVector_front(self)
 
     def back(self):
-        return _flatten_test.StringVectorVector_back(self)
+        return _krnnt_utils.StringVectorVector_back(self)
 
     def assign(self, n, x):
-        return _flatten_test.StringVectorVector_assign(self, n, x)
+        return _krnnt_utils.StringVectorVector_assign(self, n, x)
 
     def resize(self, *args):
-        return _flatten_test.StringVectorVector_resize(self, *args)
+        return _krnnt_utils.StringVectorVector_resize(self, *args)
 
     def insert(self, *args):
-        return _flatten_test.StringVectorVector_insert(self, *args)
+        return _krnnt_utils.StringVectorVector_insert(self, *args)
 
     def reserve(self, n):
-        return _flatten_test.StringVectorVector_reserve(self, n)
+        return _krnnt_utils.StringVectorVector_reserve(self, n)
 
     def capacity(self):
-        return _flatten_test.StringVectorVector_capacity(self)
-    __swig_destroy__ = _flatten_test.delete_StringVectorVector
+        return _krnnt_utils.StringVectorVector_capacity(self)
+    __swig_destroy__ = _krnnt_utils.delete_StringVectorVector
     __del__ = lambda self: None
-StringVectorVector_swigregister = _flatten_test.StringVectorVector_swigregister
+StringVectorVector_swigregister = _krnnt_utils.StringVectorVector_swigregister
 StringVectorVector_swigregister(StringVectorVector)
 
 
+def shape(text):
+    return _krnnt_utils.shape(text)
+shape = _krnnt_utils.shape
+
 def flatten(input_lists):
-    return _flatten_test.flatten(input_lists)
-flatten = _flatten_test.flatten
+    return _krnnt_utils.flatten(input_lists)
+flatten = _krnnt_utils.flatten
+
+def uniq(inp):
+    return _krnnt_utils.uniq(inp)
+uniq = _krnnt_utils.uniq
+
+def create_tags4_without_guesser(tags):
+    return _krnnt_utils.create_tags4_without_guesser(tags)
+create_tags4_without_guesser = _krnnt_utils.create_tags4_without_guesser
+
+def create_tags5_without_guesser(tags):
+    return _krnnt_utils.create_tags5_without_guesser(tags)
+create_tags5_without_guesser = _krnnt_utils.create_tags5_without_guesser
 # This file is compatible with both classic and new-style classes.
 
 

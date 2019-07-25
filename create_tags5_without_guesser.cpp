@@ -1,7 +1,7 @@
 #include "create_tags5_without_guesser.h"
 
 std::vector<std::string> create_tag5(std::string &tag){
-	if(tag.empty())return std::vector<std::string>(1, ""); // TODO: base case?
+	if(tag.empty())return std::vector<std::string>();
 
 	//cas = ['nom', 'gen', 'dat', 'acc', 'inst', 'loc', 'voc']
     static std::unordered_set<std::string> cas({"nom", "gen", "dat", "acc", "inst", "loc", "voc"});
@@ -69,8 +69,6 @@ std::vector<std::string> create_tag5(std::string &tag){
 			res.push_back(tags2.substr(0, tags2.length()-1));
 		}
 	}
-
-	//TODO: empty res vector?
 
 	return res;
 }

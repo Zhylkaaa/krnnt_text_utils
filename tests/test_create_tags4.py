@@ -40,7 +40,7 @@ def create_tag4(otag, features = None):
     tags2.append('2'+(':'.join([pos]+tags)))
 
         # print otag, tags2
-    return uniq(tags2)
+    return tags2
 
 inp = []
 total_time = 0.0
@@ -61,6 +61,7 @@ for i in lines:
         for j in res:
             p.write(j)
             p.write('\n')
+
 f.close()
 p.close()
 

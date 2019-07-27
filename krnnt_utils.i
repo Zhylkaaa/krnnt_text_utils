@@ -7,8 +7,10 @@
 namespace std {
         %template(StringVector) vector<string>;
         %template(StringVectorVector) vector< vector<string> >;
+        %template(StringVectorVectorVector) vector< vector< vector< string > > >;
         %template(IntVectorVector) vector< vector< int > >;
-        %template (StringIntMap) map<string, int>;
+        %template(IntVectorVectorVector) vector< vector< vector< int > > >;
+        %template(StringIntMap) map<string, int>;
 }
 
 %include "shape.i"

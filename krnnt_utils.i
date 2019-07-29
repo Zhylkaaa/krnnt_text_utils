@@ -11,6 +11,7 @@ namespace std {
         %template(IntVectorVector) vector< vector< int > >;
         %template(IntVectorVectorVector) vector< vector< vector< int > > >;
         %template(StringIntMap) map<string, int>;
+        %template(IntVector) vector<int>;
 }
 
 %include "shape.i"

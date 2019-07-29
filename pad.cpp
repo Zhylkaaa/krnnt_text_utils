@@ -1,12 +1,12 @@
 #include "pad.h"
 
-std::map<std::string, int> unique_features_dict;
+std::unordered_map<std::string, int> unique_features_dict;
 
 std::vector< std::vector< std::vector< int > > > pad(std::vector< std::vector< std::vector< std::string > > > batch, std::map<std::string, int> features_dict) {
-	unique_features_dict = features_dict;
+	unique_features_dict.insert(features_dict.begin(), features_dict.end());
 	std::vector< std::vector< std::vector< int > > > result(batch.size());
 	size_t dict_size = unique_features_dict.size();
-	std::map<std::string,int>::iterator it;
+	std::unordered_map<std::string,int>::iterator it;
 
 	for(int i = 0;i<batch.size();i++){
 		result[i] = std::vector< std::vector< int > >(batch[i].size(), std::vector<int>(dict_size, 0));
@@ -27,7 +27,7 @@ std::vector< std::vector< std::vector< int > > > pad(std::vector< std::vector< s
 std::vector< std::vector< std::vector< int > > > pad2(std::vector< std::vector< std::vector< std::string > > > batch) {
 	std::vector< std::vector< std::vector< int > > > result(batch.size());
 	size_t dict_size = unique_features_dict.size();
-	std::map<std::string,int>::iterator it;
+	std::unordered_map<std::string,int>::iterator it;
 
 	for(int i = 0;i<batch.size();i++){
 		result[i] = std::vector< std::vector< int > >(batch[i].size(), std::vector<int>(dict_size, 0));

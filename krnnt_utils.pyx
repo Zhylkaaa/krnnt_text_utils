@@ -38,11 +38,11 @@ def shape(word):
         elif(ustring[i].isdigit()):
             if(s[index] != <char> 'd'):
                 s += <char> 'd'
-            index += 1
+                index += 1
         else:
             if(s[index] != <char> 'x'):
                 s += <char> 'x'
-                index += 1    
+                index += 1
     return s
 
 cdef inline k_hot(tags, unique_tags_dict):
